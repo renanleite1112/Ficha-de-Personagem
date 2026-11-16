@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ficha de herói de Auros Veyr, o Cronista da Última Hora: autômato cronomante ligado ao Meridiano Zero. Projeto de Desenvolvimento Web em HTML, CSS e JavaScript.">
+  <meta name="theme-color" content="#0B0D0E">
+  <title>Auros Veyr | Ficha de Herói</title>
+
+  <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="fundo-temporal" aria-hidden="true">
+    <span class="fundo-anel fundo-anel--a"></span>
+    <span class="fundo-anel fundo-anel--b"></span>
+    <i class="fa-solid fa-gear fundo-engrenagem fundo-engrenagem--a"></i>
+    <i class="fa-solid fa-gear fundo-engrenagem fundo-engrenagem--b"></i>
+    <span class="fundo-particulas"></span>
+  </div>
+
+  <div class="barra-progresso" id="barra-progresso" aria-hidden="true"></div>
+
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho">
+    <div class="cabecalho-container">
+
+      <a class="marca" href="#sobre" title="Voltar ao topo da ficha">
+        <i class="fa-solid fa-bell" aria-hidden="true"></i>
+        <span>Registro de Agente</span>
+      </a>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
+        <ul class="navegacao-lista">
+          <li><a class="link-navegacao" href="#sobre">Sobre</a></li>
+          <li><a class="link-navegacao" href="#cronica">Crônica</a></li>
+          <li><a class="link-navegacao" href="#atributos">Atributos</a></li>
+          <li><a class="link-navegacao" href="#inventario">Inventário</a></li>
+          <li><a class="link-navegacao" href="#ameacas">Ameaças</a></li>
+          <li><a class="link-navegacao" href="#dados">Dados</a></li>
+          <li><a class="link-navegacao" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho-controles">
+
+        <button class="botao-icone" id="botao-tema" type="button" aria-pressed="false" title="Alternar modo diurno da guilda">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          <span class="somente-leitor">Alternar modo diurno</span>
+        </button>
+
+        <button class="botao-icone botao-menu" id="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal" title="Abrir menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          <span class="somente-leitor">Abrir menu de navegação</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main id="conteudo" class="conteudo">
+
+    <section id="sobre" class="secao secao-heroi">
+      <figure class="heroi-retrato">
+        <img class="heroi-avatar" src="imagens/avatar-auros.jpg" alt="Ilustração de Auros Veyr, autômato cronomante mascarado, com o relógio Meridiano Zero ao fundo.">
+        <figcaption class="heroi-retrato-legenda">Vhalor, a Cidade dos Mil Relógios</figcaption>
+      </figure>
+
+      <div class="heroi-info">
+        <p class="saudacao" id="saudacao"></p>
+        <p class="heroi-epiteto">Ficha de Herói · Registro nº 01</p>
+        <h1 class="heroi-nome">Auros Veyr</h1>
+        <p class="heroi-titulo">O Cronista da Última Hora</p>
+
+        <blockquote class="heroi-frase">
+          <p>“O futuro não está escrito. Apenas está atrasado.”</p>
+        </blockquote>
+
+        <ul class="ficha-dados">
+          <li><i class="fa-solid fa-gears" aria-hidden="true"></i><span><strong>Classe:</strong> Cronomante Mecânico</span></li>
+          <li><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span><strong>Subclasse:</strong> Relojoeiro Temporal</span></li>
+          <li><i class="fa-solid fa-robot" aria-hidden="true"></i><span><strong>Raça:</strong> Autômato consciente</span></li>
+          <li><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i><span><strong>Existência:</strong> 47 anos</span></li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><strong>Origem:</strong> Vhalor</span></li>
+          <li><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span><strong>Tendência:</strong> Neutro-benevolente</span></li>
+        </ul>
+
+        <div class="heroi-bio">
+          <p>Auros foi construído para observar o tempo, não para senti-lo. O experimento que destruiu o laboratório de Edmund Veyr o deixou ligado ao <strong>Meridiano Zero</strong>, um relógio capaz de alterar pequenos trechos da realidade — e de lembrar do que nunca aconteceu.</p>
+          <p>Hoje ele trabalha para o <strong>Observatório do Último Sino</strong>, investigando anomalias temporais ao lado de <strong>Morrow</strong>, um corvo mecânico que lembra de linhas que o tempo apagou. Auros não quer dominar o tempo. Quer entender os erros antes que alguém cometa um que não possa ser desfeito.</p>
+        </div>
+
+        <div class="historia" id="historia-completa">
+          <p>Edmund Veyr nunca quis um filho. Quis uma testemunha. Nas oficinas frias da Ordem do Meridiano, passou onze anos montando um autômato que registrasse o tempo com uma precisão que nenhuma memória humana alcança, e deu a ele um nome antigo: Auros, que na língua de Vhalor significa "aquele que escuta o que já passou".</p>
+          <p>O que Edmund não previu foi o acidente. Quando o Meridiano Zero foi ligado pela primeira vez, o laboratório existiu em três momentos ao mesmo tempo. Por alguns segundos, o tempo deixou de ser uma linha e virou um nó. Edmund não sobreviveu. Auros sim — e acordou carregando algo que nenhum relojoeiro sabe construir: a lembrança de vidas que nunca aconteceram.</p>
+          <p>Desde então, cada anomalia que ele investiga é uma chance de entender o que o criador não entendeu. Cada alteração cobra um preço dos mecanismos dele. Auros não quer consertar o passado. Quer chegar ao fim dele inteiro.</p>
+        </div>
+
+        <button class="botao-acao botao-historia" id="botao-historia" type="button" aria-expanded="false" aria-controls="historia-completa">
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          <span id="texto-historia">Ver história completa</span>
+        </button>
+
+        <details class="dossie">
+          <summary>Dossiê restrito: limitações cronais</summary>
+          <ul class="dossie-lista">
+            <li><strong>Dívida cronal:</strong> toda alteração temporal desgasta os mecanismos.</li>
+            <li><strong>A memória permanece:</strong> quando o tempo volta, o mundo esquece. Ele não.</li>
+            <li><strong>O relógio precisa existir:</strong> sem o Meridiano Zero, os poderes quase desaparecem.</li>
+            <li><strong>O futuro não é certeza:</strong> ele enxerga possibilidades, não destinos.</li>
+          </ul>
+        </details>
+      </div>
+
+      <img class="card-imagem card-imagem--local" src="imagens/vhalor.jpg" alt="Panorama de Vhalor, a Cidade dos Mil Relógios, com torres e engrenagens ao entardecer.">
+    </section>
+
+    <section id="cronica" class="secao">
+      <h2 class="secao-titulo"><i class="fa-solid fa-timeline" aria-hidden="true"></i>Crônica Temporal</h2>
+      <p class="secao-introducao">A linha que o Meridiano Zero ainda conserva, do protótipo ao agente de campo.</p>
+
+      <ol class="cronica-lista">
+        <li class="cronica-evento">
+          <h3 class="cronica-titulo">A Criação</h3>
+          <p class="cronica-descricao">Edmund Veyr, relojoeiro-arcanista da Ordem do Meridiano, constrói Auros para registrar acontecimentos com uma precisão que nenhuma mente humana alcança.</p>
+        </li>
+        <li class="cronica-evento">
+          <h3 class="cronica-titulo">O Meridiano Zero</h3>
+          <p class="cronica-descricao">Edmund forja um relógio com Âmbar Cronal: uma máquina para lembrar de coisas que nunca aconteceram. O sonho vira obsessão, e o experimento final é marcado.</p>
+        </li>
+        <li class="cronica-evento">
+          <h3 class="cronica-titulo">O Colapso</h3>
+          <p class="cronica-descricao">Por alguns segundos, o laboratório existe em três momentos ao mesmo tempo. Edmund não sobrevive. Auros sim, ligado ao relógio que ninguém deveria ter ligado.</p>
+        </li>
+        <li class="cronica-evento">
+          <h3 class="cronica-titulo">A Segunda Testemunha</h3>
+          <p class="cronica-descricao">Morrow, o corvo autômato, é banhado pela mesma energia cronal e passa a lembrar de linhas temporais que o próprio tempo apagou.</p>
+        </li>
+        <li class="cronica-evento">
+          <h3 class="cronica-titulo">O Último Sino</h3>
+          <p class="cronica-descricao">O Observatório do Último Sino acolhe Auros como agente, a primeira organização a tratá-lo como membro e não como máquina.</p>
+        </li>
+        <li class="cronica-evento cronica-evento--atual">
+          <h3 class="cronica-titulo">Ciclo 47: O Presente</h3>
+          <p class="cronica-descricao">Auros percorre Elyndor investigando anomalias, tentando descobrir quem alterou o curso original da história antes que uma segunda ruptura torne isso impossível.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="atributos" class="secao">
+      <h2 class="secao-titulo"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i>Atributos & Habilidades</h2>
+      <p class="secao-introducao">Leitura dos mecanismos registrada na última manutenção, Vhalor, ciclo 47.</p>
+
+      <h3 class="subtitulo">Atributos</h3>
+      <div class="atributos-painel">
+
+        <div class="barra-atributo">
+          <div class="barra-atributo-info">
+            <span class="barra-atributo-rotulo"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i>Força Mecânica</span>
+            <span class="barra-atributo-valor">48 <span class="barra-atributo-max">/ 100</span></span>
+          </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" aria-label="Força Mecânica: 48 de 100">
+              <div class="barra-preenchimento" style="width: 48%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Defesa</span>
+              <span class="barra-atributo-valor">67 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" aria-label="Defesa: 67 de 100">
+              <div class="barra-preenchimento" style="width: 67%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i>Velocidade</span>
+              <span class="barra-atributo-valor">76 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" aria-label="Velocidade: 76 de 100">
+              <div class="barra-preenchimento" style="width: 76%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-brain" aria-hidden="true"></i>Inteligência</span>
+              <span class="barra-atributo-valor">94 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" aria-label="Inteligência: 94 de 100">
+              <div class="barra-preenchimento" style="width: 94%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>Manipulação Temporal</span>
+              <span class="barra-atributo-valor">97 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100" aria-label="Manipulação Temporal: 97 de 100">
+              <div class="barra-preenchimento barra-preenchimento--temporal" style="width: 97%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-crosshairs" aria-hidden="true"></i>Precisão</span>
+              <span class="barra-atributo-valor">91 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" aria-label="Precisão: 91 de 100">
+              <div class="barra-preenchimento" style="width: 91%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-eye" aria-hidden="true"></i>Percepção</span>
+              <span class="barra-atributo-valor">88 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Percepção: 88 de 100">
+              <div class="barra-preenchimento" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo"><i class="fa-solid fa-compass" aria-hidden="true"></i>Vontade</span>
+              <span class="barra-atributo-valor">82 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Vontade: 82 de 100">
+              <div class="barra-preenchimento" style="width: 82%;"></div>
+            </div>
+          </div>
+      </div>
+
+      <div class="painel-xp">
+
+        <div class="xp-topo">
+          <p class="xp-rotulo"><i class="fa-solid fa-star" aria-hidden="true"></i>Experiência de campo</p>
+          <p class="xp-nivel">Nível <span id="xp-nivel">1</span></p>
+        </div>
+
+        <div class="barra-trilho barra-trilho--xp" id="xp-trilho" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Experiência de campo">
+          <div class="barra-preenchimento barra-preenchimento--xp" id="xp-preenchimento"></div>
+        </div>
+
+        <div class="xp-rodape">
+          <p class="xp-valor"><span id="xp-atual">0</span> / 100 XP</p>
+          <p class="xp-mensagem" id="xp-mensagem" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="xp-acoes">
+          <button class="botao-acao" id="botao-xp" type="button">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>Ganhar XP
+          </button>
+          <button class="botao-acao botao-acao--vazio" id="botao-xp-reset" type="button">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>Reiniciar
+          </button>
+        </div>
+
+      </div>
+
+      <h3 class="subtitulo">Habilidades</h3>
+      <ul class="habilidades-lista">
+        <li class="habilidade-item">
+          <i class="fa-solid fa-rotate-left habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Segundo Perdido <span class="habilidade-tipo habilidade-tipo--temporal">Temporal</span></p>
+            <p class="habilidade-descricao">Retrocede cerca de três segundos da própria linha temporal para corrigir uma ação recente.</p>
+          </div>
+        </li>
+        <li class="habilidade-item">
+          <i class="fa-solid fa-hand habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Mão do Relógio <span class="habilidade-tipo">Controle</span></p>
+            <p class="habilidade-descricao">Desacelera temporariamente um objeto ou mecanismo específico.</p>
+          </div>
+        </li>
+        <li class="habilidade-item">
+          <i class="fa-solid fa-bolt habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Aceleração Mecânica <span class="habilidade-tipo">Suporte</span></p>
+            <p class="habilidade-descricao">Acelera os próprios mecanismos, elevando velocidade e precisão por instantes.</p>
+          </div>
+        </li>
+        <li class="habilidade-item">
+          <i class="fa-solid fa-clone habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Eco de Possibilidade <span class="habilidade-tipo habilidade-tipo--temporal">Temporal</span></p>
+            <p class="habilidade-descricao">Cria uma manifestação residual de uma ação que poderia ter sido realizada segundos antes.</p>
+          </div>
+        </li>
+        <li class="habilidade-item">
+          <i class="fa-solid fa-eye habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Olho do Meridiano <span class="habilidade-tipo">Percepção</span></p>
+            <p class="habilidade-descricao">Analisa movimentos e calcula as probabilidades imediatas do que está por vir.</p>
+          </div>
+        </li>
+        <li class="habilidade-item">
+          <i class="fa-solid fa-burst habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Ruptura de Ponteiro <span class="habilidade-tipo">Combate</span></p>
+            <p class="habilidade-descricao">Concentra energia temporal em um golpe preciso: o impacto chega antes de o movimento terminar.</p>
+          </div>
+        </li>
+        <li class="habilidade-item">
+          <i class="fa-solid fa-crow habilidade-icone" aria-hidden="true"></i>
+          <div class="habilidade-texto">
+            <p class="habilidade-nome">Testemunha de Morrow <span class="habilidade-tipo">Auxiliar</span></p>
+            <p class="habilidade-descricao">Morrow registra acontecimentos e transmite memórias preservadas de linhas temporais descartadas.</p>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section id="inventario" class="secao">
+      <h2 class="secao-titulo"><i class="fa-solid fa-sack" aria-hidden="true"></i>Inventário & Conquistas</h2>
+      <p class="secao-introducao">Seis relíquias, ferramentas e companheiros que carregam a história do Auros. Filtre pelo tipo e favorite os que mais importam.</p>
+
+      <div class="inventario-controles">
+        <div class="filtros" role="group" aria-label="Filtrar itens por categoria">
+          <button class="botao-filtro ativo" type="button" data-filtro="todos">Todos</button>
+          <button class="botao-filtro" type="button" data-filtro="Artefato">Artefato</button>
+          <button class="botao-filtro" type="button" data-filtro="Arma">Arma</button>
+          <button class="botao-filtro" type="button" data-filtro="Relíquia">Relíquia</button>
+          <button class="botao-filtro" type="button" data-filtro="Ferramenta">Ferramenta</button>
+          <button class="botao-filtro" type="button" data-filtro="Companheiro">Companheiro</button>
+          <button class="botao-filtro" type="button" data-filtro="favoritos">Favoritos</button>
+        </div>
+        <p class="contador-itens" id="contador-itens">6 itens no acervo</p>
+      </div>
+
+      <div class="inventario-grid" id="inventario-grid"></div>
+
+      <h3 class="subtitulo">Registro de conquistas</h3>
+      <ol class="conquistas-lista">
+        <li class="conquista-item">
+          <i class="fa-solid fa-moon conquista-icone" aria-hidden="true"></i>
+          <div class="conquista-texto">
+            <p class="conquista-nome">O Homem que Sobreviveu à Meia-Noite <span class="conquista-raridade conquista-raridade--lendaria">Lendária</span></p>
+            <p class="conquista-descricao">Sobreviveu ao primeiro colapso temporal de Vhalor. Ninguém sabe como, nem ele.</p>
+          </div>
+        </li>
+        <li class="conquista-item">
+          <i class="fa-solid fa-stopwatch conquista-icone" aria-hidden="true"></i>
+          <div class="conquista-texto">
+            <p class="conquista-nome">Três Segundos <span class="conquista-raridade conquista-raridade--epica">Épica</span></p>
+            <p class="conquista-descricao">Impediu a execução de vinte e três pessoas usando uma única reversão temporal.</p>
+          </div>
+        </li>
+        <li class="conquista-item">
+          <i class="fa-solid fa-user-ninja conquista-icone" aria-hidden="true"></i>
+          <div class="conquista-texto">
+            <p class="conquista-nome">O Roubo do Amanhã <span class="conquista-raridade conquista-raridade--epica">Épica</span></p>
+            <p class="conquista-descricao">Invadiu um laboratório da Ordem do Meridiano e recuperou uma tecnologia de previsão do futuro.</p>
+          </div>
+        </li>
+        <li class="conquista-item">
+          <i class="fa-solid fa-screwdriver-wrench conquista-icone" aria-hidden="true"></i>
+          <div class="conquista-texto">
+            <p class="conquista-nome">O Último Relojoeiro <span class="conquista-raridade conquista-raridade--rara">Rara</span></p>
+            <p class="conquista-descricao">Reconstruiu sozinho o mecanismo central de uma torre temporal tida como impossível de reparar.</p>
+          </div>
+        </li>
+        <li class="conquista-item">
+          <i class="fa-solid fa-city conquista-icone" aria-hidden="true"></i>
+          <div class="conquista-texto">
+            <p class="conquista-nome">A Cidade que Não Aconteceu <span class="conquista-raridade conquista-raridade--lendaria">Lendária</span></p>
+            <p class="conquista-descricao">Diante de uma cidade apagada do tempo, escolheu preservar as memórias de seus habitantes.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ameacas" class="secao">
+      <h2 class="secao-titulo"><i class="fa-solid fa-skull" aria-hidden="true"></i>Arquivo de Ameaças</h2>
+      <p class="secao-introducao">Três nomes que também rondam o Meridiano Zero, cada um por um motivo pior que o outro.</p>
+
+      <div class="ameacas-grid">
+
+        <article class="card-item ameaca-card">
+          <i class="fa-solid fa-user-secret ameaca-icone" aria-hidden="true"></i>
+          <h3 class="card-titulo">Ordem do Meridiano</h3>
+          <p class="ameaca-tipo">Organização secreta</p>
+          <p class="card-descricao">A antiga ordem de Edmund considera Auros uma propriedade científica perdida, e quer o relógio de volta a qualquer custo.</p>
+          <div class="ameaca-nivel barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo">Nível de ameaça</span>
+              <span class="barra-atributo-valor">82 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de ameaça da Ordem do Meridiano: 82 de 100">
+              <div class="barra-preenchimento barra-preenchimento--ameaca" style="width: 82%;"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-item ameaca-card">
+          <i class="fa-solid fa-user-doctor ameaca-icone" aria-hidden="true"></i>
+          <h3 class="card-titulo">Dr. Severin Krail</h3>
+          <p class="ameaca-tipo">Relojoeiro temporal</p>
+          <p class="card-descricao">Antigo colega de Edmund, acredita que a consciência de Auros é apenas um erro matemático, e quer capturá-lo para reproduzi-la em série.</p>
+          <div class="ameaca-nivel barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo">Nível de ameaça</span>
+              <span class="barra-atributo-valor">90 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de ameaça do Dr. Severin Krail: 90 de 100">
+              <div class="barra-preenchimento barra-preenchimento--ameaca" style="width: 90%;"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-item ameaca-card ameaca-card--desconhecida">
+          <i class="fa-solid fa-ghost ameaca-icone" aria-hidden="true"></i>
+          <h3 class="card-titulo">O Homem Sem Ponteiros</h3>
+          <p class="ameaca-tipo">Entidade temporal</p>
+          <p class="card-descricao">Figura sem rosto com um relógio sem ponteiros no peito. Aparece sempre que Auros altera o tempo em excesso. Inimigo, eco ou futuro? Ninguém sabe.</p>
+          <div class="ameaca-nivel barra-atributo">
+            <div class="barra-atributo-info">
+              <span class="barra-atributo-rotulo">Nível de ameaça</span>
+              <span class="barra-atributo-valor">100 <span class="barra-atributo-max">/ 100</span></span>
+            </div>
+            <div class="barra-trilho" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de ameaça do Homem Sem Ponteiros: 100 de 100">
+              <div class="barra-preenchimento barra-preenchimento--ameaca" style="width: 100%;"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section id="dados" class="secao">
+      <h2 class="secao-titulo"><i class="fa-solid fa-dice-d20" aria-hidden="true"></i>Oráculo do Meridiano</h2>
+      <p class="secao-introducao">O Meridiano Zero não decide o futuro, mas empresta um número. Escolha o dado e faça sua jogada.</p>
+
+      <div class="painel-oraculo">
+        <div class="oraculo-grade">
+
+          <div class="oraculo-controle">
+            <h3 class="subtitulo">Escolha o dado</h3>
+            <div class="dados-seletor" id="dados-seletor" role="group" aria-label="Escolher o tipo de dado"></div>
+            <button class="botao-acao botao-rolar" id="botao-rolar" type="button">
+              <i class="fa-solid fa-dice" aria-hidden="true"></i><span>Rolar dado</span>
+            </button>
+            <p class="dado-status" id="dado-status" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="oraculo-palco">
+            <div class="dado-palco" id="dado-palco">
+              <div class="dado-anel" aria-hidden="true"></div>
+              <div class="dado-svg" id="dado-svg" aria-hidden="true"></div>
+            </div>
+            <p class="dado-resultado" id="dado-resultado">—</p>
+            <p class="dado-tipo" id="dado-tipo">d6</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="historico">
+        <div class="historico-cabecalho">
+          <h3 class="subtitulo">Histórico de jogadas</h3>
+          <button class="botao-acao botao-secundario botao-limpar" id="botao-limpar-historico" type="button">
+            <i class="fa-solid fa-trash-can" aria-hidden="true"></i><span>Limpar histórico</span>
+          </button>
+        </div>
+        <p class="historico-contador" id="historico-contador">Nenhuma jogada registrada.</p>
+        <ul class="historico-lista" id="historico-lista"></ul>
+        <nav class="historico-paginacao" id="historico-paginacao" aria-label="Paginas do historico" hidden>
+          <button class="botao-acao botao-secundario botao-pagina" id="pagina-anterior" type="button">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i><span>Anterior</span>
+          </button>
+          <span class="pagina-rotulo" id="pagina-rotulo" aria-live="polite"></span>
+          <button class="botao-acao botao-secundario botao-pagina" id="pagina-proxima" type="button">
+            <span>Próxima</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <section id="contato" class="secao">
+      <h2 class="secao-titulo"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contato com a Guilda</h2>
+      <p class="secao-introducao">Para contratos de investigação, relatos de anomalias ou recados que não podem esperar pelo amanhã.</p>
+
+      <div class="guilda-cartao">
+
+        <img class="card-imagem card-imagem--guilda" src="imagens/guilda-observatorio.jpg" alt="A sede do Observatório do Último Sino, torre com sino cercada por um círculo de relógio.">
+
+        <div class="guilda-coluna">
+          <h3 class="guilda-nome">Observatório do Último Sino</h3>
+          <p class="guilda-descricao">Guilda sediada em Vhalor, dedicada ao estudo de artefatos antigos, fenômenos inexplicáveis e anomalias temporais. Foi uma das primeiras a reconhecer a consciência de Auros e a tratá-lo como membro, não como máquina.</p>
+
+          <ul class="guilda-canais">
+            <li><i class="fa-brands fa-discord" aria-hidden="true"></i><span><strong>Discord:</strong> @ObservatorioDoUltimoSino</span></li>
+            <li><i class="fa-solid fa-hashtag" aria-hidden="true"></i><span><strong>Canal:</strong> #agentes-temporais</span></li>
+            <li><i class="fa-solid fa-id-card" aria-hidden="true"></i><span><strong>Guild ID:</strong> VHL-01-CRON</span></li>
+          </ul>
+
+          <div class="guilda-acoes">
+            <a class="botao-guilda" href="https://discord.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord" aria-hidden="true"></i>Discord da guilda</a>
+            <a class="botao-guilda" href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub do agente</a>
+            <a class="botao-guilda" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn do agente</a>
+          </div>
+        </div>
+
+        <div class="guilda-coluna">
+          <form class="formulario" id="formulario-guilda" novalidate>
+
+            <h3 class="formulario-titulo">Enviar mensagem à guilda</h3>
+
+            <div class="formulario-campo">
+              <label for="campo-nome">Nome do agente</label>
+              <input id="campo-nome" name="nome" type="text" autocomplete="name" placeholder="Como o Observatório deve te chamar?">
+              <p class="campo-erro" id="erro-nome"></p>
+            </div>
+
+            <div class="formulario-campo">
+              <label for="campo-email">E-mail</label>
+              <input id="campo-email" name="email" type="email" autocomplete="email" placeholder="agente@vhalor.com">
+              <p class="campo-erro" id="erro-email"></p>
+            </div>
+
+            <div class="formulario-campo">
+              <label for="campo-mensagem">Mensagem</label>
+              <textarea id="campo-mensagem" name="mensagem" rows="5" placeholder="Descreva a anomalia, o contrato ou o recado"></textarea>
+              <p class="campo-erro" id="erro-mensagem"></p>
+            </div>
+
+            <button class="botao-acao" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i><span>Enviar mensagem</span></button>
+            <p class="formulario-status" id="formulario-status" role="status" aria-live="polite"></p>
+
+          </form>
+
+          <p class="guilda-resposta" id="guilda-resposta">“Solicitação recebida. O passado já foi consultado.”</p>
+          <p class="guilda-lema">“Se o passado deixou uma cicatriz, nós descobriremos quando ela foi feita.”</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p class="rodape-linha">Fim do Registro nº 01, Vhalor, Elyndor</p>
+    <p class="rodape-linha rodape-frase">“O tempo não perdoa. Apenas esquece.”</p>
+    <p class="rodape-linha"><small>Selado pelo Observatório do Último Sino. Este arquivo permanece sob guarda da guilda.</small></p>
+  </footer>
+
+  <button class="botao-topo" id="botao-topo" type="button" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
